@@ -462,7 +462,7 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:0px;
+  top:35px;
   width:210px;
   height:35px;
   text-align:left;
@@ -527,7 +527,7 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:35px;
+  top:0px;
   width:210px;
   height:35px;
   text-align:left;
@@ -763,7 +763,7 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:0px;
+  top:35px;
   width:210px;
   height:35px;
   text-align:left;
@@ -797,9 +797,9 @@
 #u20_text {
   border-width:0px;
   position:absolute;
-  left:30px;
+  left:25px;
   top:10px;
-  width:178px;
+  width:183px;
   word-wrap:break-word;
 }
 #u21_div {
@@ -828,7 +828,7 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:35px;
+  top:0px;
   width:210px;
   height:35px;
   text-align:left;
