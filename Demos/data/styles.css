@@ -15,6 +15,15 @@
 }
 .ellipse {
 }
+.shape {
+  font-family:'Verdana Regular', 'Verdana';
+  font-weight:400;
+  font-style:normal;
+  font-size:13px;
+  color:#333333;
+  text-align:center;
+  line-height:normal;
+}
 .image {
 }
 .placeholder {
@@ -76,8 +85,6 @@
   text-align:left;
 }
 .text_field {
-  color:#000000;
-  text-align:left;
 }
 .text_area {
   color:#000000;
@@ -106,6 +113,8 @@
 }
 .table_cell {
 }
+.connector {
+}
 .paragraph1 {
   text-align:left;
 }
@@ -116,7 +125,7 @@
   font-size:32px;
   text-align:left;
 }
-.shape {
+.shape1 {
   font-size:14px;
   text-align:left;
 }

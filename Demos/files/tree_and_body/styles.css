@@ -158,14 +158,13 @@
   top:0px;
   width:300px;
   height:25px;
-  background-color:transparent;
   font-family:'Arial';
   font-weight:400;
   font-style:normal;
   font-size:13px;
   text-decoration:none;
-  color:#000000;
-  text-align:left;
+  color:#333333;
+  text-align:center;
 }
 #u99 {
   border-width:0px;
@@ -271,14 +270,13 @@
   top:0px;
   width:300px;
   height:25px;
-  background-color:transparent;
   font-family:'Arial';
   font-weight:400;
   font-style:normal;
   font-size:13px;
   text-decoration:none;
-  color:#000000;
-  text-align:left;
+  color:#333333;
+  text-align:center;
 }
 #u103_div {
   border-width:0px;
