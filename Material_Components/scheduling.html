@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Scheduling Table</title>
     <!--<link rel="stylesheet" href="/node_modules/material-components-web/dist/material-components-web.css">-->
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--<script src="/node_modules/material-components-web/dist/material-components-web.js"></script>-->
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <style>
-         :root {
+        :root {
             --mdc-theme-primary: #0288D1;
             --mdc-theme-text-primary-on-primary: var(--mdc-theme-text-primary-on-dark);
             --mdc-theme-secondary: #FF9800;
@@ -35,11 +34,13 @@
             background-size: cover;
             background-position: center;
         }
+
         /* Ensure layout covers the entire screen. */
 
         html {
             height: 100%;
         }
+
         /* Place drawer and content side by side. */
 
         .body {
@@ -49,6 +50,7 @@
             height: 100%;
             width: 100%;
         }
+
         /* Stack toolbar and main on top of each other. */
 
         .main {
@@ -69,6 +71,11 @@
             padding: 15px;
         }
 
+        .delete {
+            min-width: 0;
+            font-size: 18px;
+        }
+
         .mdc-menu-anchor {
             margin: 16px;
         }
@@ -87,12 +94,11 @@
                 <span class="mdc-toolbar__title" style="font-size: 2.125rem;">Scheduling</span>
             </section>
             <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
-                    <div class="mdc-menu-anchor">
-                <a href="#" class="mdc-toolbar__menu-icon toggle" style="padding:0">
-                        <i class="mdc-ripple-surface material-icons search align-icons" data-mdc-ripple-is-unbounded
-                            aria-label="More" data-mdc-auto-init="MDCRipple">more_vert</i>
+                <div class="mdc-menu-anchor">
+                    <a href="#" class="mdc-toolbar__menu-icon toggle" style="padding:0">
+                        <i class="mdc-ripple-surface material-icons search align-icons" data-mdc-ripple-is-unbounded aria-label="More" data-mdc-auto-init="MDCRipple">more_vert</i>
                     </a>
-                
+
                     <div class="mdc-simple-menu mdc-simple-menu--open-from-top-right" tabindex="-1" id="demo-menu">
                         <ul class="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
                             <li class="mdc-list-item" role="menuitem" tabindex="0">Back</li>
@@ -119,31 +125,31 @@
             <nav class="mdc-temporary-drawer__content mdc-list-group">
                 <div id="icon-with-text-demo" class="mdc-list">
                     <a class="mdc-list-item mdc-temporary-drawer--selected" data-mdc-auto-init="MDCRipple" href="#">
-                <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
-              </a>
+                        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
+                    </a>
                     <a class="mdc-list-item" data-mdc-auto-init="MDCRipple" href="#">
-                <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
-              </a>
+                        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
+                    </a>
                     <a class="mdc-list-item" data-mdc-auto-init="MDCRipple" href="#">
-                <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Sent Mail
-              </a>
+                        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Sent Mail
+                    </a>
                     <a class="mdc-list-item" data-mdc-auto-init="MDCRipple" href="#">
-                <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Drafts
-              </a>
+                        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Drafts
+                    </a>
                 </div>
 
                 <hr class="mdc-list-divider">
 
                 <div class="mdc-list">
                     <a class="mdc-list-item" data-mdc-auto-init="MDCRipple" href="#">
-                <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>All Mail
-              </a>
+                        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>All Mail
+                    </a>
                     <a class="mdc-list-item" data-mdc-auto-init="MDCRipple" href="#">
-                <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">delete</i>Trash
-              </a>
+                        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">delete</i>Trash
+                    </a>
                     <a class="mdc-list-item" data-mdc-auto-init="MDCRipple" href="#">
-                <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">report</i>Spam
-              </a>
+                        <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">report</i>Spam
+                    </a>
                 </div>
             </nav>
         </nav>
@@ -162,65 +168,29 @@
                         <section class="mdc-card__supporting-text">
                             <!--Scheduling Table-->
                             <table class="my-table" id="my-table">
-                                <tr>
+                                <tr id="row0">
+                                    <th></th>
                                     <th style="border-radius: 15px 0 0 0;">Start</th>
                                     <th style="border-radius: 0 15px 0 0;">Stop</th>
                                 </tr>
-                                <tr>
+                                <tr id="row1">
                                     <td>
+                                        <button href="#" class="delete material-icons mdc-button mdc-button--compact mdc-button--dense mdc-typography--button" id="button1">
+                                            delete
+                                        </button>
+                                    </td>
+                                    <td style="border-radius: 0 0 0 15px;">
                                         <div class="mdc-textfield">
                                             <input type="text" id="start1" class="mdc-textfield__input">
                                         </div>
                                     </td>
-                                    <td>
+                                    <td style="border-radius: 0 0 15px 0;">
                                         <div class="mdc-textfield">
                                             <input type="text" id="stop1" class="mdc-textfield__input">
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <div class="mdc-textfield">
-                                            <input type="text" id="start2" class="mdc-textfield__input">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="mdc-textfield">
-                                            <input type="text" id="stop2" class="mdc-textfield__input">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="mdc-textfield">
-                                            <input type="text" id="start3" class="mdc-textfield__input">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="mdc-textfield">
-                                            <input type="text" id="stop3" class="mdc-textfield__input">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="border-radius: 0 0 0 15px;">
-                                        <div class="mdc-textfield">
-                                            <input type="text" id="start4" class="mdc-textfield__input">
-                                        </div>
-                                    </td>
-                                    <td style="border-radius: 0 0 15px 0;">
-                                        <div class="mdc-textfield">
-                                            <input type="text" id="stop4" class="mdc-textfield__input">
-                                        </div>
-                                    </td>
-                                </tr>
                             </table>
-                            <div style="text-align: right">
-                                <button class="mdc-button add-row-button" style="font-size: 0.7rem">
-                                    <i class="mdc-button__icon material-icons" style="font-size: 0.7rem; line-height: inherit">add_circle</i>
-                                    Add row
-                                </button>
-                            </div>
                         </section>
                         <section class="mdc-card__actions">
                             <button class="mdc-button 
@@ -267,10 +237,20 @@
         });
     </script>
     <script>
-        document.querySelector('.add-row-button').addEventListener('click',
-            function AddRow() {
-                // Find a <table> element with id="myTable":
+        //Scripts for table function
+        
+        // Find a <table> element with id="myTable":
                 var table = document.getElementById("my-table");
+
+        table.rows[1].addEventListener('input', AddRow);
+        table.rows[1].cells[0].querySelector('button').addEventListener('click', function () {
+            if (table.rows.length > 2) {
+                table.deleteRow(table.rows[1].rowIndex);
+            }
+        });
+
+        function AddRow() {
+            if ($(this).closest('tr').is(':last-child')) {
 
                 // Create an empty <tr> element and add it to the 1st position of the table:
                 var row = table.insertRow();
@@ -278,20 +258,51 @@
                 // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
                 var cell1 = row.insertCell(0);
                 var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
 
                 // Add some text to the new cells:
-                cell1.innerHTML = "<div class=\"mdc-textfield\"><input type=\"text\" id=\"start" + row.rowIndex + "\" class=\"mdc-textfield__input\"></div>";
-                cell2.innerHTML = "<div class=\"mdc-textfield\"><input type=\"text\" id=\"stop" + row.rowIndex + "\" class=\"mdc-textfield__input\"></div>";
-            });
+                cell1.innerHTML = '<button href="#" class="delete material-icons mdc-button mdc-button--compact mdc-button--dense mdc-typography--button">delete</button>';
+                cell1.querySelector('button').addEventListener('click', function () {
+                    if (table.rows.length > 2) {
+                        table.deleteRow(row.rowIndex);
+                    }
+                });
+                cell2.innerHTML = '<div class="mdc-textfield"><input type="text" class="mdc-textfield__input"></div>';
+                cell3.innerHTML = '<div class="mdc-textfield"><input type="text" class="mdc-textfield__input"></div>';
+
+                // Create new event listeners
+                row.addEventListener('input', AddRow)
+            }
+        }
+
+        function DeleteRow() {
+            //remove last row event handlers
+            document.getElementById(last_start).removeEventListener('input', AddRow);
+            document.getElementById(last_stop).removeEventListener('input', AddRow);
+
+            // Find a <table> element with id="myTable":
+            var table = document.getElementById("my-table");
+
+            var row_count = table.rows.length;
+            last_start = "start" + row_count;
+            last_stop = "stop" + row_count;
+
+            // Create an empty <tr> element and add it to the 1st position of the table:
+            var row = table.deleteRow();
+
+            // Create new event listeners
+            document.getElementById(last_start).addEventListener('input', AddRow);
+            document.getElementById(last_stop).addEventListener('input', AddRow);
+        }
     </script>
     <script>
-        //toggle more menu
-        var menuEl = document.querySelector('#demo-menu');
-        var menu = new mdc.menu.MDCSimpleMenu(menuEl);
-        var toggle = document.querySelector('.toggle');
-        toggle.addEventListener('click', function () {
-            menu.open = !menu.open;
-        });
+            //toggle more menu
+            var menuEl = document.querySelector('#demo-menu');
+            var menu = new mdc.menu.MDCSimpleMenu(menuEl);
+            var toggle = document.querySelector('.toggle');
+            toggle.addEventListener('click', function () {
+                menu.open = !menu.open;
+            });
     </script>
 </body>
 
