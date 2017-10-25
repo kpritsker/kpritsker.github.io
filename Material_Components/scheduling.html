@@ -25,10 +25,6 @@
             flex-wrap: wrap;
         }
 
-        .table-card {
-            width: 25em;
-        }
-
         .mdc-toolbar__row:first-child::after {
             background-image: url("assets/Jellyfish.jpg");
             background-size: cover;
@@ -62,13 +58,20 @@
             border-collapse: collapse;
             border-radius: 15px;
             border-style: hidden;
-            box-shadow: 0 0 0 1px;
+            /*box-shadow: 0 0 0 1px;*/
+        }
+
+        tr {
+            border-bottom: 1.5px solid rgba(189, 189, 189, 0.6);
         }
 
         th,
         td {
-            border: 1px solid black;
             padding: 15px;
+        }
+
+        th {
+            text-align: left;
         }
 
         .delete {
@@ -78,6 +81,15 @@
 
         .mdc-menu-anchor {
             margin: 16px;
+        }
+
+        #sticky-element.sticky {
+            position: fixed;
+            bottom: 1.5rem;
+        }
+
+        #sticky-button.sticky {
+            --mdc-button: --mdc-button--raised;
         }
     </style>
 </head>
@@ -156,6 +168,7 @@
     </aside>
 
     <main class="mdc-toolbar-fixed-adjust main">
+
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="margin: auto">
@@ -165,7 +178,7 @@
                             <h1 class="mdc-card__title mdc-card__title--large mdc-theme--text-primary-on-primary">Scheduling Table</h1>
                             <h2 class="mdc-card__subtitle mdc-theme--text-primary-on-primary">Input start and stop times</h2>
                         </section>
-                        <section class="mdc-card__supporting-text">
+                        <section class="mdc-card__supporting-text" style="padding: 8px 0px">
                             <!--Scheduling Table-->
                             <table class="my-table" id="my-table">
                                 <tr id="row0">
@@ -175,7 +188,7 @@
                                 </tr>
                                 <tr id="row1">
                                     <td>
-                                        <button href="#" class="delete material-icons mdc-button mdc-button--compact mdc-button--dense mdc-typography--button" id="button1">
+                                        <button href="#" class="delete material-icons mdc-button mdc-button--compact mdc-button--dense mdc-typography--button" data-mdc-auto-init="MDCRipple">
                                             delete
                                         </button>
                                     </td>
@@ -193,20 +206,23 @@
                             </table>
                         </section>
                         <section class="mdc-card__actions">
-                            <button class="mdc-button 
+                            <div id="sticky-element">
+                                <button class="mdc-button 
                                 mdc-button--primary 
                                 mdc-button--compact 
                                 mdc-typography--button 
-                                mdc-card__action" data-mdc-auto-init="MDCRipple">
-                                Save
-                            </button>
-                            <button class="mdc-button
+                                mdc-card__action" data-mdc-auto-init="MDCRipple" id="sticky-button1">
+                                    Save
+                                </button>
+                                <button class="mdc-button
                                 mdc-button--primary 
                                 mdc-button--compact 
                                 mdc-typography--button
-                                mdc-card__action" data-mdc-auto-init="MDCRipple">
-                                Cancel
-                            </button>
+                                mdc-card__action" data-mdc-auto-init="MDCRipple" id="sticky-button2">
+                                    Cancel
+                                </button>
+                            </div>
+                            &nbsp<div id="sticky-anchor"></div>
                         </section>
                     </div>
                 </div>
@@ -217,12 +233,12 @@
 
     <script>
         window.mdc.autoInit();
-    </script>
-    <script>
+
+
         var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
         toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
-    </script>
-    <script>
+
+
         var drawerEl = document.querySelector('.mdc-temporary-drawer');
         var MDCTemporaryDrawer = mdc.drawer.MDCTemporaryDrawer;
         var drawer = new MDCTemporaryDrawer(drawerEl);
@@ -235,12 +251,12 @@
         drawerEl.addEventListener('MDCTemporaryDrawer:close', function () {
             console.log('Received MDCTemporaryDrawer:close');
         });
-    </script>
-    <script>
+
+
         //Scripts for table function
-        
+
         // Find a <table> element with id="myTable":
-                var table = document.getElementById("my-table");
+        var table = document.getElementById("my-table");
 
         table.rows[1].addEventListener('input', AddRow);
         table.rows[1].cells[0].querySelector('button').addEventListener('click', function () {
@@ -275,34 +291,36 @@
             }
         }
 
-        function DeleteRow() {
-            //remove last row event handlers
-            document.getElementById(last_start).removeEventListener('input', AddRow);
-            document.getElementById(last_stop).removeEventListener('input', AddRow);
 
-            // Find a <table> element with id="myTable":
-            var table = document.getElementById("my-table");
+        //toggle more menu
+        var menuEl = document.querySelector('#demo-menu');
+        var menu = new mdc.menu.MDCSimpleMenu(menuEl);
+        var toggle = document.querySelector('.toggle');
+        toggle.addEventListener('click', function () {
+            menu.open = !menu.open;
+        });
 
-            var row_count = table.rows.length;
-            last_start = "start" + row_count;
-            last_stop = "stop" + row_count;
 
-            // Create an empty <tr> element and add it to the 1st position of the table:
-            var row = table.deleteRow();
-
-            // Create new event listeners
-            document.getElementById(last_start).addEventListener('input', AddRow);
-            document.getElementById(last_stop).addEventListener('input', AddRow);
+        function StickyRelocate() {
+            var window_bottom = $(window).scrollTop() + $(window).height();
+            var div_bottom = $('#sticky-anchor').offset().top + $('#sticky-anchor').height();
+            if (window_bottom < div_bottom) {
+                $('#sticky-element').addClass('sticky');
+                $('#sticky-button1').addClass('mdc-button--raised');
+                $('#sticky-button2').addClass('mdc-button--raised');
+            }
+            else {
+                $('#sticky-element').removeClass('sticky');
+                $('#sticky-button1').removeClass('mdc-button--raised');
+                $('#sticky-button2').removeClass('mdc-button--raised');
+            };
         }
-    </script>
-    <script>
-            //toggle more menu
-            var menuEl = document.querySelector('#demo-menu');
-            var menu = new mdc.menu.MDCSimpleMenu(menuEl);
-            var toggle = document.querySelector('.toggle');
-            toggle.addEventListener('click', function () {
-                menu.open = !menu.open;
-            });
+
+        $(function () {
+            $(window).scroll(StickyRelocate);
+            $(table).on("input", "input", StickyRelocate);
+            StickyRelocate();
+        });
     </script>
 </body>
 
