@@ -264,6 +264,7 @@
                 table.deleteRow(table.rows[1].rowIndex);
             }
         });
+        table.rows[1].cells[0].querySelector('button').addEventListener('click', StickyRelocate);
 
         function AddRow() {
             if ($(this).closest('tr').is(':last-child')) {
@@ -283,6 +284,7 @@
                         table.deleteRow(row.rowIndex);
                     }
                 });
+                cell1.querySelector('button').addEventListener('click', StickyRelocate);
                 cell2.innerHTML = '<div class="mdc-textfield"><input type="text" class="mdc-textfield__input"></div>';
                 cell3.innerHTML = '<div class="mdc-textfield"><input type="text" class="mdc-textfield__input"></div>';
 
