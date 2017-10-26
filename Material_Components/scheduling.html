@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!--<script src="/node_modules/material-components-web/dist/material-components-web.js"></script>-->
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <style>
         :root {
             --mdc-theme-primary: #0288D1;
@@ -63,6 +66,7 @@
 
         tr {
             border-bottom: 1.5px solid rgba(189, 189, 189, 0.6);
+            position: relative;
         }
 
         th,
@@ -188,7 +192,8 @@
                                 </tr>
                                 <tr id="row1">
                                     <td>
-                                        <button href="#" class="delete material-icons mdc-button mdc-button--compact mdc-button--dense mdc-typography--button" data-mdc-auto-init="MDCRipple">
+                                        <button href="#" class="delete material-icons mdc-button mdc-button--compact mdc-button--dense mdc-typography--button" data-mdc-auto-init="MDCRipple"
+                                            disabled>
                                             delete
                                         </button>
                                     </td>
@@ -222,7 +227,8 @@
                                     Cancel
                                 </button>
                             </div>
-                            &nbsp<div id="sticky-anchor"></div>
+                            &nbsp
+                            <div id="sticky-anchor"></div>
                         </section>
                     </div>
                 </div>
@@ -271,6 +277,7 @@
 
                 // Create an empty <tr> element and add it to the 1st position of the table:
                 var row = table.insertRow();
+                //$(row).hide();
 
                 // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
                 var cell1 = row.insertCell(0);
@@ -283,13 +290,23 @@
                     if (table.rows.length > 2) {
                         table.deleteRow(row.rowIndex);
                     }
+                    if (table.rows.length == 2) {
+                        table.rows[1].cells[0].querySelector('button').disabled = true;
+                    }
                 });
                 cell1.querySelector('button').addEventListener('click', StickyRelocate);
                 cell2.innerHTML = '<div class="mdc-textfield"><input type="text" class="mdc-textfield__input"></div>';
                 cell3.innerHTML = '<div class="mdc-textfield"><input type="text" class="mdc-textfield__input"></div>';
 
+                //enable first row delete button
+                table.rows[1].cells[0].querySelector('button').disabled = false;
+
                 // Create new event listeners
-                row.addEventListener('input', AddRow)
+                row.addEventListener('input', AddRow);
+
+                // $(row).show("slide", {direction: "up"}, 1000);
+                //$(row).animate({height: 'show'});
+                //$(row).slideDown("slow");
             }
         }
 
