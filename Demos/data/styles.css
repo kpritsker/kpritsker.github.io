@@ -157,6 +157,14 @@
   font-size:24px;
   color:rgba(0, 0, 0, 0.866666666666667);
 }
+.title {
+  font-family:'Roboto Regular', 'Roboto';
+  font-weight:bold;
+  font-style:normal;
+  font-size:13px;
+  color:rgba(255, 255, 255, 0.866666666666667);
+  text-align:left;
+}
 .body_1 {
   font-family:'Roboto Regular', 'Roboto';
   font-weight:400;
