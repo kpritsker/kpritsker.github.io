@@ -194,6 +194,20 @@
   font-size:14px;
   color:#2196F3;
 }
+.raised_button {
+  font-family:'Roboto Regular', 'Roboto';
+  font-weight:500;
+  font-style:normal;
+  font-size:14px;
+  color:#FFFFFF;
+}
+.raised_button_pressed {
+  font-family:'Roboto Regular', 'Roboto';
+  font-weight:500;
+  font-style:normal;
+  font-size:14px;
+  color:#FFFFFF;
+}
 .hint_text {
   font-family:'Roboto Regular', 'Roboto';
   font-weight:400;
