@@ -194,6 +194,13 @@
   font-size:14px;
   color:rgba(0, 0, 0, 0.537254901960784);
 }
+.disabled_text_dark {
+  font-family:'Roboto Regular', 'Roboto';
+  font-weight:400;
+  font-style:normal;
+  font-size:14px;
+  color:rgba(0, 0, 0, 0.258823529411765);
+}
 .flat_button {
   font-family:'Roboto Regular', 'Roboto';
   font-weight:500;
@@ -214,6 +221,26 @@
   font-style:normal;
   font-size:14px;
   color:#FFFFFF;
+}
+.status_bar_light {
+}
+.title_bar_light {
+  font-family:'Roboto Regular', 'Roboto';
+  font-weight:500;
+  font-style:normal;
+  font-size:20px;
+  color:rgba(0, 0, 0, 0.866666666666667);
+  text-align:left;
+}
+.content_bg_light {
+}
+.dialog_light {
+  font-family:'Roboto Regular', 'Roboto';
+  font-weight:500;
+  font-style:normal;
+  font-size:20px;
+  color:rgba(0, 0, 0, 0.866666666666667);
+  text-align:left;
 }
 .hint_text {
   font-family:'Roboto Regular', 'Roboto';
