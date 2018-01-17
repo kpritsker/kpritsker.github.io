@@ -172,12 +172,26 @@
   color:rgba(255, 255, 255, 0.866666666666667);
   text-align:left;
 }
+.subheader {
+  font-family:'Roboto Regular', 'Roboto';
+  font-weight:400;
+  font-style:normal;
+  font-size:16px;
+  color:rgba(0, 0, 0, 0.866666666666667);
+}
 .body_1 {
   font-family:'Roboto Regular', 'Roboto';
   font-weight:400;
   font-style:normal;
   font-size:14px;
   color:rgba(0, 0, 0, 0.866666666666667);
+}
+.caption {
+  font-family:'Roboto Regular', 'Roboto';
+  font-weight:400;
+  font-style:normal;
+  font-size:12px;
+  color:rgba(0, 0, 0, 0.537254901960784);
 }
 .primary_text_dark {
   font-family:'Roboto Regular', 'Roboto';
@@ -202,6 +216,13 @@
   color:rgba(0, 0, 0, 0.258823529411765);
 }
 .flat_button {
+  font-family:'Roboto Regular', 'Roboto';
+  font-weight:500;
+  font-style:normal;
+  font-size:14px;
+  color:#2196F3;
+}
+.flat_button_pressed {
   font-family:'Roboto Regular', 'Roboto';
   font-weight:500;
   font-style:normal;
@@ -248,6 +269,8 @@
   font-style:normal;
   font-size:16px;
   color:rgba(0, 0, 0, 0.258823529411765);
+}
+.card {
 }
 .shape2 {
 }
