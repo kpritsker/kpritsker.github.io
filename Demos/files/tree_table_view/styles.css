@@ -2156,7 +2156,7 @@
   left:0px;
   top:0px;
   width:100px;
-  height:18px;
+  height:16px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
   border:none;
@@ -2171,9 +2171,9 @@
   border-width:0px;
   position:absolute;
   left:0px;
-  top:0px;
+  top:1px;
   width:100px;
-  height:18px;
+  height:16px;
   color:#0000FF;
   text-align:right;
 }
@@ -2213,7 +2213,7 @@
   left:0px;
   top:0px;
   width:100px;
-  height:18px;
+  height:16px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
   border:none;
@@ -2228,9 +2228,9 @@
   border-width:0px;
   position:absolute;
   left:0px;
-  top:0px;
+  top:1px;
   width:100px;
-  height:18px;
+  height:16px;
   color:#0000FF;
   text-align:right;
 }
@@ -2672,7 +2672,7 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:4px;
+  top:5px;
   width:69px;
   word-wrap:break-word;
 }
@@ -2720,7 +2720,7 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:4px;
+  top:5px;
   width:69px;
   word-wrap:break-word;
 }
@@ -2774,7 +2774,7 @@
   border-width:0px;
   position:absolute;
   left:20px;
-  top:4px;
+  top:5px;
   width:69px;
   word-wrap:break-word;
 }
@@ -2808,7 +2808,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:53px;
+  width:68px;
   height:1px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
@@ -2824,7 +2824,7 @@
   position:absolute;
   left:0px;
   top:11px;
-  width:53px;
+  width:68px;
   height:1px;
   font-size:20px;
 }
@@ -2833,7 +2833,7 @@
   position:absolute;
   left:0px;
   top:-11px;
-  width:53px;
+  width:68px;
   white-space:nowrap;
 }
 #u86_div {
@@ -2841,7 +2841,7 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:66px;
+  width:72px;
   height:27px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
@@ -2857,9 +2857,9 @@
 #u86 {
   border-width:0px;
   position:absolute;
-  left:63px;
+  left:57px;
   top:0px;
-  width:66px;
+  width:72px;
   height:27px;
   font-size:20px;
   color:#5F83BA;
@@ -2870,7 +2870,7 @@
   position:absolute;
   left:2px;
   top:2px;
-  width:62px;
+  width:68px;
   white-space:nowrap;
 }
 #u87_div {
@@ -2897,7 +2897,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -2910,7 +2910,7 @@
   top:91px;
   width:130px;
   height:34px;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -2940,7 +2940,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -2972,7 +2972,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3012,7 +3012,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3025,7 +3025,7 @@
   top:91px;
   width:130px;
   height:34px;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3055,7 +3055,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3087,7 +3087,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3127,7 +3127,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3140,7 +3140,7 @@
   top:91px;
   width:130px;
   height:34px;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3170,7 +3170,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3202,7 +3202,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3242,7 +3242,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3255,7 +3255,7 @@
   top:91px;
   width:130px;
   height:34px;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3285,7 +3285,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3317,7 +3317,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3357,7 +3357,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3370,7 +3370,7 @@
   top:91px;
   width:130px;
   height:34px;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3400,7 +3400,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3432,7 +3432,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:24px;
@@ -3478,8 +3478,8 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:212px;
-  height:41px;
+  width:221px;
+  height:42px;
   background:inherit;
   background-color:rgba(255, 255, 255, 0);
   border:none;
@@ -3487,7 +3487,7 @@
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   box-shadow:none;
-  font-family:'Arial';
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:36px;
@@ -3497,9 +3497,9 @@
   position:absolute;
   left:30px;
   top:165px;
-  width:212px;
-  height:41px;
-  font-family:'Arial';
+  width:221px;
+  height:42px;
+  font-family:'Consolas';
   font-weight:400;
   font-style:normal;
   font-size:36px;
@@ -3509,6 +3509,6 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:212px;
+  width:221px;
   white-space:nowrap;
 }
